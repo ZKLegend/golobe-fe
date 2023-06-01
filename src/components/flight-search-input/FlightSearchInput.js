@@ -68,7 +68,9 @@ export function FlightSearchInput() {
     setIsLoading(true);
     const getDatas = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/flight/city");
+        const response = await axios.get(
+          "https://golobe-be.onrender.com//flight/city"
+        );
         setDatas(response.data);
         console.log("Response Data:", response);
         setIsLoading(false);

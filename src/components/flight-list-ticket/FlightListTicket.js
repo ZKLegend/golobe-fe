@@ -72,9 +72,12 @@ const FlightListTicket = () => {
     const getDatas = async () => {
       try {
         dispatch(setIsSearch(false)); //dat len dau de neu call api loi van set lai isSearch
-        const response = await axios.get("http://localhost:3000/flight/list", {
-          params: params,
-        });
+        const response = await axios.get(
+          "https://golobe-be.onrender.com//flight/list",
+          {
+            params: params,
+          }
+        );
         console.log(response.data[0]);
         setTotal(response.data[0].metadata[0]?.total);
         setDatas(response.data[0].data);

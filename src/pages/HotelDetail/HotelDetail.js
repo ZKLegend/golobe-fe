@@ -21,7 +21,9 @@ const HotelDetail = () => {
   useEffect(() => {
     dispatch(setIsLoading());
     axios
-      .get(`http://localhost:3001/api/stay/hotel/${urlParams.hotelId}`)
+      .get(
+        `https://golobe-be.onrender.com//api/stay/hotel/${urlParams.hotelId}`
+      )
       .then((result) => {
         setHotelDetail(result.data);
       })

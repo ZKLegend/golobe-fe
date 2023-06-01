@@ -50,7 +50,7 @@ const DetailedInformation = ({ hotelDetail }) => {
     const getReviews = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/api/review/${params.hotelId}`
+          `https://golobe-be.onrender.com//api/review/${params.hotelId}`
         );
         if (response.status === 200 && response.data)
           setReviews([...response.data]);
@@ -81,7 +81,7 @@ const DetailedInformation = ({ hotelDetail }) => {
       const token = localStorage.getItem("token");
       let reqBody = { ...value };
       const response = await axios.post(
-        `http://localhost:3001/api/review/${params.hotelId}`,
+        `https://golobe-be.onrender.com//api/review/${params.hotelId}`,
         reqBody,
         {
           headers: { authToken: token },
