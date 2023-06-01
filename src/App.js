@@ -1,5 +1,5 @@
-import { Routes, Route, Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
 import { setIsLogin } from "./redux/loginSlice";
 import { useDispatch } from "react-redux";
 
