@@ -27,7 +27,7 @@ const FlightFilter = () => {
     const getDatas = async () => {
       try {
         const response = await axios.get(
-          "https://golobe-be.onrender.com//flight/airline"
+          "https://golobe-be.onrender.com/flight/airline"
         );
         setDatas(response.data);
         setIsLoading(false);

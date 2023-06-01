@@ -10,7 +10,7 @@ const AccountInfo = () => {
     const getUserInfo = async () => {
       try {
         const response = await axios.get(
-          `https://golobe-be.onrender.com//api/user/getInfo`,
+          `https://golobe-be.onrender.com/api/user/getInfo`,
           { headers: { authToken: token } }
         );
         if (response.status === 200 && response.data) {

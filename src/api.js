@@ -3,7 +3,7 @@ import axios from "axios";
 export async function getDestination() {
   try {
     const response = await axios.get(
-      "https://golobe-be.onrender.com//api/stay/destination"
+      "https://golobe-be.onrender.com/api/stay/destination"
     );
 
     return response.data;
@@ -16,7 +16,7 @@ export async function getHotelData(params) {
   try {
     const response = await axios({
       method: "get",
-      url: `https://golobe-be.onrender.com//api/stay/room`,
+      url: `https://golobe-be.onrender.com/api/stay/room`,
       params: params,
     });
     console.log(response.data);
@@ -29,7 +29,7 @@ export async function getHotelData(params) {
 export async function getAmenities() {
   try {
     const response = await axios.get(
-      "https://golobe-be.onrender.com//api/stay/amenity"
+      "https://golobe-be.onrender.com/api/stay/amenity"
     );
     return response.data;
   } catch (err) {
@@ -40,7 +40,7 @@ export async function getAmenities() {
 export async function registerAccount(reqBody) {
   try {
     const response = await axios.post(
-      `https://golobe-be.onrender.com//api/user/register`,
+      `https://golobe-be.onrender.com/api/user/register`,
       reqBody
     );
     return response;

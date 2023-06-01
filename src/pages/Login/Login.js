@@ -17,7 +17,7 @@ const Login = () => {
     console.log(event);
     try {
       const response = await axios.post(
-        `https://golobe-be.onrender.com//api/user/login`,
+        `https://golobe-be.onrender.com/api/user/login`,
         event
       );
       console.log("Response from Login API:", response);
